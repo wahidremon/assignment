@@ -37,3 +37,27 @@ function budgetCalculator(watchNmuber, phoneNumber, laptopNumber) {
 
 var result = budgetCalculator(0, 1, 2);
 console.log(result);
+
+// hotelCost
+function hotelCost(hotelDays) {    
+    if (hotelDays <= 10 ) {
+        var hotelPrice = hotelDays * 100;
+    }
+    else if (hotelDays <= 20) {
+        var firstTen = 10 * 100;
+        var remaining = hotelDays - 10;
+        var secondTen = remaining * 80;
+        hotelPrice = firstTen + secondTen;
+    }
+    else {
+        firstTen = 10 * 100;
+        secondTen = 10 * 80;
+        remaining = hotelDays - 20;
+        var lastRemain = remaining * 50;
+        hotelPrice = firstTen + secondTen + lastRemain;
+    }
+    return hotelPrice;
+}
+
+var totalBill = hotelCost(21);
+console.log(totalBill);
