@@ -6,7 +6,7 @@ function kilometerToMeter(kilometerLength) {
     return meterLength;
 }
 
-var result = kilometerToMeter(57);
+var result = kilometerToMeter(7);
 console.log(result);
 
 // budgetCalculator
@@ -61,3 +61,18 @@ function hotelCost(hotelDays) {
 
 var totalBill = hotelCost(21);
 console.log(totalBill);
+
+// megaFriend
+function megaFriend(friendList) {
+    var megaFriendName = friendList[0];
+    for (var i = 0; friendList.lenghth; i++) {
+        var element = friendList[i];
+        if (megaFriendName.lenghth < element.lenghth) {
+            megaFriendName = element
+        }
+    }
+    return megaFriendName
+ }
+
+var result = megaFriend(["Mohammad", "Saddam", "Wahid", "Remon", "Ali", "Junaid", "Rahman", "Zubaier"]);
+console.log(result);
